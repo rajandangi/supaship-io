@@ -5,7 +5,7 @@
 Make sure docker is running, then:
 
 ```bash
-git clone https://github.com/rajandangi/supaship.io.git && \
+git clone git@github.com:rajandangi/supaship-io.git && \
   cd supaship.io && \
   npm && \
   npm add -D supabase && \
