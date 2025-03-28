@@ -64,3 +64,19 @@ To step through tests:
 ```bash
 npm run debug
 ```
+
+# 📝 Notes
+
+- `npx supabase migration new original-ddl` creates a migration file with the original DDL. This migration file can be used to recreate the database schema. DDL stands for Data Definition Language, which is a set of SQL commands that define the database structure.
+- `npx supabase stop` stops the local instance of supabase server.
+- `npx supabase start` starts the local instance of supabase server.
+
+# Playwright E2E Testing
+Playwright is a Node library which allows you to automate Chromium, Firefox and WebKit with a single API. It is built to enable cross-browser web automation that is reliable and capable of running on CI.
+Playwright docs: https://playwright.dev/docs/intro
+
+**To create Playwright in your repository, run:**
+
+```bash
+npm create playwright
+```
