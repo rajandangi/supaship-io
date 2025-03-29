@@ -68,8 +68,13 @@ npm run debug
 # 📝 Notes
 
 - `npx supabase migration new original-ddl` creates a migration file with the original DDL. This migration file can be used to recreate the database schema. DDL stands for Data Definition Language, which is a set of SQL commands that define the database structure.
+
 - `npx supabase stop` stops the local instance of supabase server.
+
 - `npx supabase start` starts the local instance of supabase server.
+
+- __Supabase Auth UI__ is a pre-built UI component that allows you to easily add authentication to your application. It is built on top of Supabase's authentication API and provides a simple way to handle user sign-up, sign-in, and password recovery flows. You can customize the look and feel of the UI to match your application's design. https://supabase.com/docs/guides/auth/auth-helpers/auth-ui
+
 
 # Playwright E2E Testing
 Playwright is a Node library which allows you to automate Chromium, Firefox and WebKit with a single API. It is built to enable cross-browser web automation that is reliable and capable of running on CI.
