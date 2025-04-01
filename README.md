@@ -75,7 +75,29 @@ npm run debug
 
 - __Supabase Auth UI__ is a pre-built UI component that allows you to easily add authentication to your application. It is built on top of Supabase's authentication API and provides a simple way to handle user sign-up, sign-in, and password recovery flows. You can customize the look and feel of the UI to match your application's design. https://supabase.com/docs/guides/auth/auth-helpers/auth-ui
 
+- Command to create a migration file from your current local Supabase state: 
+  ```bash
+  npx supabase db diff --use-migra --file=<name of the migration>
+  ```
 
+- Reset the database completely (will clear all data):
+  ```bash
+  npx supabase db reset
+  ```
+- Apply only pending migrations:
+  ```bash
+  npx supabase migration up
+  ```
+- Checking list of migrations:
+  ```bash
+  npx supabase migration list
+  ```
+- [Row Level Security(RLS) in Supabase](https://supabase.com/docs/guides/database/postgres/row-level-security)
+
+- Command to generate typscript types:
+  ```bash
+  npx supabase gen types typescript --local > ./src/database.types.ts
+  ```
 # Playwright E2E Testing
 Playwright is a Node library which allows you to automate Chromium, Firefox and WebKit with a single API. It is built to enable cross-browser web automation that is reliable and capable of running on CI.
 Playwright docs: https://playwright.dev/docs/intro

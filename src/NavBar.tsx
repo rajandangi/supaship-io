@@ -1,7 +1,12 @@
 import { Link } from "react-router"
 import logo from "./assets/logo.svg"
+import { useContext } from "react"
+import { UserContext } from "./App"
+import Login from "./Login"
+import UserMenu from "./UserMenu"
 
 const NavBar = () => {
+    const { session } = useContext(UserContext);
     return (
         <>
             <nav className="nav-bar">
@@ -14,6 +19,9 @@ const NavBar = () => {
                         <Link to="/1" className="nav-message-board-link">
                             Message Board
                         </Link>
+                    </li>
+                    <li>
+                        {session?.user ? <UserMenu/> : <Login />}
                     </li>
                 </ul>
             </nav>
