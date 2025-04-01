@@ -333,15 +333,16 @@ function CreateComment({
                         .rpc("create_new_comment", {
                             user_id: user.session?.user.id || "",
                             content: comment,
-                            path: `${parent.path}.${parent.id.replaceAll("-", "_")}`,
+                            path: `${parent.path}.${parent.id.replace(/-/g, "_")}`, // Replaced replaceAll with replace and regex
                         })
                         .then(({ error }) => {
                             if (error) {
                                 console.log(error);
                             } else {
                                 onSuccess();
-                                textareaRef.current?.value != null &&
-                                    (textareaRef.current.value = "");
+                                if (textareaRef.current?.value != null) { // Replaced unused expression with explicit if
+                                    textareaRef.current.value = "";
+                                }
                             }
                         });
                 }}
@@ -422,7 +423,7 @@ function getParent(map: Record<string, Comment>, path: string): Comment {
 }
 
 function convertToUuid(path: string): string {
-    return path.replaceAll("_", "-");
+    return path.replace(/_/g, "-"); // Replaced replaceAll with replace and a global regex
 }
 
 function getDepth(path: string): number {
