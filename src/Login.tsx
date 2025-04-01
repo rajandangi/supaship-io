@@ -40,6 +40,7 @@ const Login = () => {
                     {
                         <Auth
                             supabaseClient={supabaseClient}
+                            providers={['github']}
                             view={authMode}
                             appearance={{
                                 theme: ThemeSupa,
@@ -50,7 +51,6 @@ const Login = () => {
                                     input: "login-form-input",
                                 }
                             }}
-                            providers={['github']}
                         />
                     }
                 </>} />
