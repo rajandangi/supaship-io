@@ -1,3 +1,5 @@
+[![Netlify Status](https://api.netlify.com/api/v1/badges/8da12374-2b50-485f-bb7e-d0d3645c21cb/deploy-status)](https://app.netlify.com/sites/bejewelled-nougat-e64e4a/deploys)
+
 # supaship.io (React + TypeScript + Vite)
 
 ## Quick start
